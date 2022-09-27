@@ -19,6 +19,7 @@
     border: 2px solid #ff6961;
     border-radius: 10px;
     background-color: #fff4e3;
+    overflow: auto;
 }
 
 .title-form{
@@ -118,6 +119,13 @@
 .btn-b-container{
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.img-link{
+    margin-top: 10px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
 }
 
 /* AQUI ABAJO COMIENZA EL INPUT RANGE*/

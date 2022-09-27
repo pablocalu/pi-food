@@ -16,7 +16,7 @@ export default function CreateRecipe() {
         name: '',
         healthScore: 1,
         summary: '',
-        image: '',
+        image: 'https://cutt.ly/TVPjXfg',
         diets: [],
         steps: ''
     })
@@ -151,6 +151,7 @@ export default function CreateRecipe() {
                         <div>
                             <input className='form-s-input' type="text" value={input.image} name='image' onChange={(e) => handleChange(e)} />
                         </div>
+                            <img className="img-link" src={input.image} alt="recipe" />
                     </div>
                     <div onChange={(e) => handleCheck(e)} className='check-form'>
                         <label>You must choose at least one type of diet</label>

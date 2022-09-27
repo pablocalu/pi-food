@@ -4,7 +4,7 @@ import { cleanDetail, deleteRecipe, getRecipeDetail, recipeDetail } from '../../
 import { useEffect } from "react";
 import './RecipeDetail.css'
 
-export default function RecipeDetail(props){
+export default function RecipeDetail(props) {
 
     const id = props.match.params.id
     const dispatch = useDispatch()
@@ -35,40 +35,42 @@ export default function RecipeDetail(props){
     }
 
 
-    return(
+    return (
         <div className="container-detail">
             <div className="container-detail-2">
                 <div>
-                <button  className="detail-btn" onClick={allcb}>Back</button>            
+                    <button className="detail-btn" onClick={allcb}>Back</button>
                 </div>
                 <div className="detail-title">
                     <h2>{recipe.name}</h2>
                 </div>
                 <div className="detail-img-container">
-                    <img  className="detail-img" src={recipe.image} alt={recipe.name} />
+                    <img className="detail-img" src={recipe.image} alt={recipe.name} />
                 </div>
                 <div className="hs-container-detail">
                     <div>Health Score: {recipe.healthScore}</div>
                 </div>
                 <div className="detail-diets-container">
-                        {
-                            recipe.diets?.map((diet) => (
-                                <button className="detail-diets" key={diet}>
-                                    {diet.toUpperCase()}
-                                </button>
-                            ))
-                        }
+                    {
+                        recipe.diets?.map((diet) => (
+                            <button className="detail-diets" key={diet}>
+                                {diet.toUpperCase()}
+                            </button>
+                        ))
+                    }
                 </div>
-                <div>
-                <p className="sum-container" dangerouslySetInnerHTML={{ __html: recipe.summary }} />
+                <div className="div-detail">
+                    <h4 className="hs-container-detail">Summary</h4>
+                    <p className="sum-container" dangerouslySetInnerHTML={{ __html: recipe.summary }} />
                 </div>
                 <div className="detail-step-container">
-                <p className="detail-step">{recipe.steps?.map(e=> 
-                        <p>{e.number} - {e.step}</p>) } </p>
+                    <h4 className="hs-container-detail">Steps</h4>
+                    <p className="detail-step">{recipe.steps?.map(e =>
+                        <p>{e.number} - {e.step}</p>)} </p>
                 </div>
                 {
                     id.length > 15 ? <div className="div-delete-btn"><button className="delete-btn" onClick={remove}> Delete Recipe </button></div> : ""
-                }       
+                }
             </div>
         </div>
     )
