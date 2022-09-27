@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+.paginate-container {
+    font-family: Poppins;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-secondary-900);
+  }
+
+.paginate-btn{
+    background-color: #ffdfac;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+}
+
+.paginate-btn:hover{
+    transition: .5s ease-in-out;
+    background-color: #ff6961;
+    cursor: pointer;
+    color: black;
+}
+
+.paginate-btn-active{
+    background-color: #ff6961;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+}

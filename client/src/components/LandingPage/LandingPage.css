@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
+  
+
+
+.fatherLanding{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: normal;
+    align-content: normal;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-container{
+    font-family: Poppins; 
+    background-color: #fff4e3;  
+    color: #8e713a    ;
+    display: flex;
+    place-items: center;
+    text-align: center;
+}
+
+.left-container h1{
+    padding: 110px 100px 10px 200px;
+}
+
+.left-container h2{
+    padding: 10px 100px 70px 200px;
+}
+
+.boton {
+    margin-left: 100px;
+    margin-bottom: 70px;
+    height: 100px;
+    width: 150px;
+    -webkit-animation: 5s rotate linear infinite;
+    animation: 5s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.rigth-container{
+    background: url(../../images/landing.png);
+    background-size: cover;
+}

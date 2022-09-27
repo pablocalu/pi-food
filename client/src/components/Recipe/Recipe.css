@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+.recipe-container {
+    margin: 10px;
+}
+
+.recipe {
+    margin: 2px;
+    font-family: Poppins,sans-serif;
+
+}
+
+.card {
+    width: 600px;
+    height: 250px;
+    display: flex;
+    box-shadow: 0 5px 10px black;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.recipe:hover {
+    
+   opacity: 0.9;
+}
+
+.img-container {
+    overflow: auto;
+    display: flex;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(90deg, #fabfb7   0%,   #fff4e3 100%);
+}
+
+.recipe-img {
+    margin-left: 10%;
+    align-self: center;
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff4e3;
+    height: 100%;
+    width: 300px;
+    padding: 10px 15px;
+}
+
+
+.diet-btn {
+    margin: 5px;
+    margin-bottom: 5px;
+    border: none ;
+    background-color: #fff4e3;
+    color: #6F5B33;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.title {
+    color: #5C4823;
+
+}
+
+
+.btn {
+    margin-top: 20px;
+    font-family: Poppins,sans-serif;
+    font-size: 17px;
+    text-decoration: none;
+    overflow: hidden;
+    height: 30px;
+    width: 150px;
+    background-color: #ffdfac;
+    border-radius: 8px;
+}
+.btn:hover{
+    transition: .5s ease-in-out;
+    background-color: #ff6961;
+    cursor: pointer;
+    color: #5C4823;
+}
+
+.text h4 {
+    color: #5C4823;
+}
+
+.ups-container{
+    align-self: center;
+    border-radius: 10px;
+    background-color: #fff4e3;
+    color: #5C4823;
+    box-shadow: 0 5px 10px black;
+    text-align: center;
+}
+
+.ups-title{
+    color: #5C4823;
+    font-size: 30px;
+    
+}
+.ups-img{
+    margin-left: 20px;
+    align-items: center;
+    background: url(../../images/ups2.png) no-repeat center;
+    height: 250px;
+    width: 250px;
+}

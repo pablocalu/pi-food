@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+.container-detail{
+    font-family: Poppins;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background: url(../../images/fondo2.png);
+}
+
+.container-detail-2{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 950px;
+    width: 750px;
+    border: 2px solid #ff6961;
+    border-radius: 10px;
+    background-color: #fff4e3;
+    overflow: auto;
+}
+
+.detail-btn{
+    font-family: Poppins,sans-serif;
+    font-size: 18px;
+    height: 30px;
+    width: 100px;
+    background-color: #ffdfac;
+    border-radius: 8px;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.detail-title{
+    align-self: center;
+    color: #8e713a;
+    margin-bottom: 10px;
+}
+
+.detail-img-container{
+    align-self: center;
+}
+
+.detail-img{
+    height: 250px;
+    width: 350px;
+    border-radius: 25px;
+
+}
+
+.detail-diets-container{
+    align-self: center;
+}
+
+.detail-diets{
+    height: 100px;
+    width: 140px;
+    margin: 10px;
+    border: none;
+    background-color: #fff4e3;
+    color: #ff6961;
+    font-weight: bold;
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+.detail-step-container{
+    align-self: center;
+}
+
+.detail-step{
+    color: #ad8e55;
+    padding-left: 2%;
+}
+
+.div-delete-btn{
+    margin-top: 20px;
+    align-self: center;
+}
+
+.delete-btn{
+    color:black;
+    font-family: Poppins;
+    background-color: #ff6961;
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border-color: #ff6961;
+    border-radius: 8px;
+}
+
+.sum-container{
+    color: #ad8e55;
+    padding-left: 2%;
+}
+
+.hs-container-detail{
+    color: #ad8e55;
+    align-self: center;
+    font-size: 20px;
+}
