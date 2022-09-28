@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { cleanDetail, deleteRecipe, getRecipeDetail, recipeDetail } from '../../redux/actions';
+import { cleanDetail, deleteRecipe, getRecipeDetail} from '../../redux/actions';
 import { useEffect } from "react";
 import './RecipeDetail.css'
 
@@ -11,7 +11,6 @@ export default function RecipeDetail(props) {
 
     useEffect(() => {
         dispatch(getRecipeDetail(id))
-        dispatch(recipeDetail)
     }, [dispatch, id])
 
     const recipe = useSelector((state) => state.detail)

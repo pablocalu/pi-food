@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_ALL_RECIPES, FILTER_BY_DIET, SORT_BY_AZ, SORT_BY_HS, GET_NAME_RECIPES, GET_DIETS, GET_RECIPE_DETAIL, RECIPE_DETAIL, DELETE_RECIPE, CLEAN_DETAIL, SET_PAGE } from './const';
+import { GET_ALL_RECIPES, FILTER_BY_DIET, SORT_BY_AZ, SORT_BY_HS, GET_NAME_RECIPES, GET_DIETS, GET_RECIPE_DETAIL, DELETE_RECIPE, CLEAN_DETAIL} from './const';
 
 export function getRecipes() {
     return async function (dispatch) {
@@ -94,12 +94,6 @@ export function getRecipeDetail(id) {
     }
 }
 
-export function recipeDetail(data = {}) {
-    return {
-        type: RECIPE_DETAIL,
-        payload: data
-    };
-}
 
 export function cleanDetail() {
     return {

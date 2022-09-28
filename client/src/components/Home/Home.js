@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { getRecipes, getFilteredDiets, sortByAZ, sortByHS } from "../../redux/actions";
+import { getRecipes, getFilteredDiets, sortByAZ, sortByHS} from "../../redux/actions";
 import { Link } from "react-router-dom";
 import Recipe from "../Recipe/Recipe";
 import Paginate from "../Paginate/Paginate";
@@ -19,7 +19,6 @@ export default function Home() {
     const indexOfLastRecipe = currentPage * recipesPerPage;
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
     const currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
-    const totalPages = Math.ceil(allRecipes / recipesPerPage)
 
 
     const paginate = (pageNumber) => {
@@ -39,6 +38,7 @@ export default function Home() {
 
     function handleDietFilter(e) {
         dispatch(getFilteredDiets(e.target.value))
+        setCurrentPage(1)
     }
 
     function handleAzOrder(e) {
@@ -54,6 +54,7 @@ export default function Home() {
         setCurrentPage(1);
         setOrder(`Order ${e.target.value}`)
     }
+
 
     return allRecipes.length > 0 && allRecipes !== undefined ? (
         <div className="backHome">
@@ -80,7 +81,7 @@ export default function Home() {
                 <div>
                     <h4 className="select-title">Order by Diet</h4>
                     <select onChange={e => handleDietFilter(e)} className='select-box'>
-                        <option value="none">Choose an order</option>
+                        <option value="all">Choose an order</option>
                         <option value="all">All</option>
                         <option value="gluten free">Gluten free</option>
                         <option value="ketogenic">Ketogenic</option>

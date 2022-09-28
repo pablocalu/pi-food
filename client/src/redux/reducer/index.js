@@ -1,4 +1,4 @@
-import { GET_ALL_RECIPES, FILTER_BY_DIET, SORT_BY_AZ, SORT_BY_HS, GET_NAME_RECIPES, CREATE_RECIPE, GET_DIETS, RECIPE_DETAIL, GET_RECIPE_DETAIL, DELETE_RECIPE, CLEAN_DETAIL } from "../actions/const";
+import { GET_ALL_RECIPES, FILTER_BY_DIET, SORT_BY_AZ, SORT_BY_HS, GET_NAME_RECIPES, CREATE_RECIPE, GET_DIETS, GET_RECIPE_DETAIL, DELETE_RECIPE, CLEAN_DETAIL} from "../actions/const";
 
 
 const initialState = {
@@ -6,8 +6,6 @@ const initialState = {
     allRecipes: [],
     diets: [],
     detail: {},
-    page: 1
-
 }
 
 function rootReducer(state = initialState, action) {
@@ -92,11 +90,6 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 detail: action.payload
             }
-        case RECIPE_DETAIL:
-            return {
-                ...state,
-                detail: action.payload
-            };
         case CLEAN_DETAIL:
                 return {
                     ...state,

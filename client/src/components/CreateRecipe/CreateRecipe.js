@@ -74,14 +74,20 @@ export default function CreateRecipe() {
         //summary validations
         if (!recipe.summary.trim()) {
             errors.summary = 'Summary must be completed'
-        } else if (!regexName.test(recipe.summary.trim())) {
-            errors.summary = 'Symbols not allowed'
-        }
+        } 
         //steps validation   
         if (!recipe.steps) {
             errors.steps = 'Steps must be completed'
+        } else if (recipe.summary.trim().length < 10) {
+            errors.summary = 'Summary must have more than 10 letters'
         }
 
+        //link validationconst 
+        const validLink = (url) =>  /^(https):\/\/[^ "]+$/.test(url)
+
+        if(!validLink(recipe.image)){          
+            errors.image = 'Link is incorrect'
+        }
         return errors
     }
 
@@ -150,6 +156,7 @@ export default function CreateRecipe() {
                         </div>
                         <div>
                             <input className='form-s-input' type="text" value={input.image} name='image' onChange={(e) => handleChange(e)} />
+                            {formErrors.image ? <h5 className="err-form"><small>{formErrors.image}</small></h5> : false}
                         </div>
                             <img className="img-link" src={input.image} alt="recipe" />
                     </div>
