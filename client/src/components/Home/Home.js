@@ -71,7 +71,7 @@ export default function Home() {
                     Refresh
                 </button>
                 <div>
-                    <h4 className="select-title">Orden Alphabetic</h4>
+                    <h4 className="select-title">Alphabetic Order</h4>
                     <select onChange={e => handleAzOrder(e)} className='select-box'>
                         <option value="none">Choose an order</option>
                         <option value="az">A-Z</option>
