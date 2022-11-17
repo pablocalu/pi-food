@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './Recipe.css'
 
 export default function Recipe({ name, diets, image, healthScore, id, }) {
+    console.log('testing')
     return (
 
         <div className="recipe">
