@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-//import { };
 import { useDispatch, useSelector } from "react-redux";
 import { createRecipe, getDiets } from "../../redux/actions";
 import './CreateRecipe.css'
