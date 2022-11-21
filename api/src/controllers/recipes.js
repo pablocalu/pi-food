@@ -22,7 +22,6 @@ const getApiInfo = async () => {
             steps: newStep
         }
     })
-    //console.log(apiInfo.steps[0])
     return apiInfo    
 }
 
