@@ -21,7 +21,7 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 recipes: action.payload,
             }
-        case FILTER_BY_DIET: //me creo 2 estados, para que cada vez que necesito filtrar siempre tengo un estado con TODO, si no voy a filtrar sobre lo filtrado
+        case FILTER_BY_DIET:
             const allRecipes = state.allRecipes
             const dietsFiltered = action.payload === 'all' ? allRecipes : allRecipes.filter(r => r.diets.includes(action.payload))
             return {
