@@ -30,13 +30,7 @@ router.get('/recipes', async (req, res) => {
 router.get('/recipes/:id', async (req,res) => {
     const { id } = req.params
     const getInfoById = await getById(id)
-
-    //if(getInfoById){
-        //res.status(200).
     return res.send(getInfoById)
-    //}
-    //res.status(404).send('Cannot find a recipe with this id.')
-    
 })
 
 router.get('/diets', async (req, res) => {
